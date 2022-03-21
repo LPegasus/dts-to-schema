@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`interface declaration analyze array.d.ts: array 1`] = `
+Object {
+  "arr1": Object {
+    "isArray": true,
+    "latitude": 1,
+    "nullable": false,
+    "optional": false,
+    "v": "string",
+  },
+  "arr2": Object {
+    "isArray": true,
+    "latitude": 2,
+    "nullable": false,
+    "optional": false,
+    "v": "string",
+  },
+  "arr3": Object {
+    "isArray": true,
+    "latitude": 1,
+    "nullable": false,
+    "optional": false,
+    "v": "number",
+  },
+  "arr4": Object {
+    "isArray": true,
+    "latitude": 2,
+    "nullable": false,
+    "optional": false,
+    "v": "number",
+  },
+  "arr5": Object {
+    "isArray": true,
+    "latitude": 2,
+    "nullable": false,
+    "optional": false,
+    "v": "number",
+  },
+}
+`;
+
+exports[`interface declaration analyze base interface: base 1`] = `
+Object {
+  "foo": Object {
+    "isArray": false,
+    "nullable": false,
+    "optional": false,
+    "v": "string",
+  },
+  "optionalField": Object {
+    "isArray": false,
+    "nullable": false,
+    "optional": true,
+    "v": "number",
+  },
+}
+`;

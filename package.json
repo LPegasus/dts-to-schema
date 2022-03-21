@@ -1,0 +1,35 @@
+{
+  "name": "dts-to-schema",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "benchmark": "node -r ts-node/register/transpile-only benchmarks/benchmark.ts",
+    "start": "ts-node-transpile-only src/index.ts",
+    "test": "jest --watchAll",
+    "test:schemas": "jest -c ./_schemas_/jest.config.js"
+  },
+  "dependencies": {
+    "ajv": "8.10.0",
+    "change-case": "4.1.2",
+    "fs-extra": "9.1.0",
+    "prettier": "2.6.0",
+    "tslib": "2.3.1",
+    "typescript": "4.6.2"
+  },
+  "devDependencies": {
+    "@types/benchmark": "^2.1.1",
+    "@types/fs-extra": "9.0.13",
+    "@types/jest": "27.4.1",
+    "@types/node": "16.11.26",
+    "@types/prettier": "2.4.4",
+    "benchmark": "2.1.4",
+    "jest": "27.5.1",
+    "jest-watch-typeahead": "1.0.0",
+    "ts-jest": "27.1.3",
+    "ts-node": "10.7.0"
+  }
+}

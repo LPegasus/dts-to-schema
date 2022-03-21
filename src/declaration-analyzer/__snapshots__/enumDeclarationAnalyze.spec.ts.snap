@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`enum declaration analyze Bar.d.ts 1`] = `
+Array [
+  Object {
+    "name": "A",
+    "value": 1,
+  },
+  Object {
+    "name": "B",
+    "value": 3,
+  },
+  Object {
+    "name": "C",
+    "value": 5,
+  },
+]
+`;
+
+exports[`enum declaration analyze Foo.d.ts 1`] = `
+Array [
+  Object {
+    "name": "A",
+    "value": "\\"A\\"",
+  },
+  Object {
+    "name": "B",
+    "value": 0,
+  },
+  Object {
+    "name": "C",
+    "value": 1,
+  },
+]
+`;

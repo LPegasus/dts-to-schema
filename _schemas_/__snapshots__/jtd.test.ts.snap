@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jtd test schema test with type 1`] = `
+Array [
+  Object {
+    "instancePath": "",
+    "keyword": "properties",
+    "message": "must have property 'ip'",
+    "params": Object {
+      "error": "missing",
+      "missingProperty": "ip",
+    },
+    "schemaPath": "/definitions/Base.Payload/properties/ip",
+  },
+]
+`;
+
+exports[`jtd test serializer and deserializer 1`] = `"{\\"payloads\\":[{\\"data\\":{},\\"ip\\":\\"1\\",\\"regions\\":[\\"1\\"]}],\\"_\\":[]}"`;

@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JtdPrintAdaptor emitEntry 1`] = `
+"import type { JTDSchemaType, SomeJTDSchemaType } from \\"ajv/dist/jtd\\";
+import * as ArrayBase from \\"../ts-json-schema/ArrayBase.schema.ts\\";
+import * as Base from \\"../ts-json-schema/Base.schema.ts\\";
+const definitions = {
+[ArrayBase.name]: ArrayBase.schema,
+[Base.name]: Base.schema,
+};
+export const SchemaCollections = {
+[ArrayBase.name]: { ref: ArrayBase.name, definitions } as SomeJTDSchemaType as JTDSchemaType<ArrayBase._T>,
+[Base.name]: { ref: Base.name, definitions } as SomeJTDSchemaType as JTDSchemaType<Base._T>,
+};
+"
+`;
+
+exports[`JtdPrintAdaptor emitSchema base 1`] = `
+"/// <reference path=\\"../dts/Base.d.ts\\" />
+import { JTDSchemaType, SomeJTDSchemaType } from \\"ajv/dist/core\\";
+export const schema = {
+  \\"properties\\": {
+    \\"foo\\": {
+      \\"type\\": \\"string\\"
+    }
+  },
+  \\"optionalProperties\\": {
+    \\"optionalField\\": {
+      \\"type\\": \\"float64\\"
+    }
+  }
+} as SomeJTDSchemaType as JTDSchemaType<Base>;
+
+export const name = \\"Base\\";
+export type _T = Base;
+"
+`;
+
+exports[`JtdPrintAdaptor emitSchema with array 1`] = `
+"/// <reference path=\\"../dts/ArrayBase.d.ts\\" />
+import { JTDSchemaType, SomeJTDSchemaType } from \\"ajv/dist/core\\";
+export const schema = {
+  \\"properties\\": {
+    \\"arr1\\": {
+      \\"elements\\": \\"string\\"
+    },
+    \\"arr3\\": {
+      \\"elements\\": {
+        \\"elements\\": {
+          \\"ref\\": \\"Some.Other.Type\\"
+        }
+      },
+      \\"nullable\\": true
+    }
+  },
+  \\"optionalProperties\\": {
+    \\"arr2\\": {
+      \\"elements\\": {
+        \\"elements\\": {
+          \\"elements\\": \\"float64\\"
+        }
+      }
+    }
+  }
+} as SomeJTDSchemaType as JTDSchemaType<ArrayBase>;
+
+export const name = \\"ArrayBase\\";
+export type _T = ArrayBase;
+"
+`;

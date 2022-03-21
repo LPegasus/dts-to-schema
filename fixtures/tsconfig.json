@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "None",
+    "pretty": true,
+    "rootDir": ".",
+    "declaration": true,
+    "newLine": "lf",
+    "noEmitOnError": true
+  }
+}
